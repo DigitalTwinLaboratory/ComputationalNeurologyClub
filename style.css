@@ -620,13 +620,30 @@ img {
 }
 
 .hero-image img {
-  width: 80%;
-  max-width: 480px;
-  opacity: 0.92;
-  mask-image: radial-gradient(circle, white 40%, rgba(255,255,255,0.5) 70%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle, white 40%, rgba(255,255,255,0.5) 70%, transparent 100%);
-  filter: drop-shadow(0 0 40px rgba(150, 50, 255, 0.25));
+  width: 90%;                 /* 少し拡大して四角い端を外に追い出す */
+  max-width: 520px;
+  opacity: 0.95;
+
+  /* 真ん中だけハッキリ見えて、外側ほど強く消えるマスク */
+  mask-image: radial-gradient(
+    circle,
+    white 0%,
+    white 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle,
+    white 0%,
+    white 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    transparent 100%
+  );
+
+  /* 周りにふんわり紫の光を追加して背景となじませる */
+  filter: drop-shadow(0 0 40px rgba(120, 50, 255, 0.35));
 }
+
 
 /* スマホ対応 */
 @media (max-width: 900px) {
