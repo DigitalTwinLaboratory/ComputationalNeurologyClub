@@ -622,8 +622,10 @@ img {
 .hero-image img {
   width: 80%;
   max-width: 480px;
-  opacity: 0.9;
-  filter: drop-shadow(0 0 20px rgba(0,0,0,0.4));
+  opacity: 0.92;
+  mask-image: radial-gradient(circle, white 40%, rgba(255,255,255,0.5) 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, white 40%, rgba(255,255,255,0.5) 70%, transparent 100%);
+  filter: drop-shadow(0 0 40px rgba(150, 50, 255, 0.25));
 }
 
 /* スマホ対応 */
@@ -636,12 +638,4 @@ img {
     width: 65%;
     margin-top: 20px;
   }
-}
-.hero-image img {
-  width: 80%;
-  max-width: 480px;
-  opacity: 0.9;
-  filter: drop-shadow(0 0 20px rgba(0,0,0,0.4));
-  mask-image: radial-gradient(circle, white 60%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle, white 60%, transparent 100%);
 }
