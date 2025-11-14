@@ -645,14 +645,47 @@ img {
 }
 
 
-/* スマホ対応 */
 @media (max-width: 900px) {
+
   .hero-inner {
     flex-direction: column;
     text-align: center;
+    align-items: center; /* ← 中央揃えの肝 */
   }
-  .hero-image img {
-    width: 65%;
+
+  .hero-text {
+    width: 100%;
+    max-width: 600px; /* テキスト幅を適正化 */
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* ← 画像も中央 */
     margin-top: 20px;
+  }
+
+  .hero-image img {
+    width: 75%; /* ← スマホでは控えめサイズに */
+    max-width: 360px;
+    margin: 0 auto;
+    opacity: 0.95;
+
+    /* スマホでは少し強めにフェードして自然に */
+    mask-image: radial-gradient(
+      circle,
+      white 0%,
+      white 45%,
+      rgba(255,255,255,0.3) 65%,
+      transparent 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle,
+      white 0%,
+      white 45%,
+      rgba(255,255,255,0.3) 65%,
+      transparent 100%
+    );
   }
 }
