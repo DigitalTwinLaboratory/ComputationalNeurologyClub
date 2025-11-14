@@ -658,6 +658,9 @@ img {
     max-width: 600px; /* テキスト幅を適正化 */
     margin: 0 auto;
   }
+  .hero-actions {
+    justify-content: center;   /* ←これを追加 */
+  }
 
   .hero-image {
     width: 100%;
